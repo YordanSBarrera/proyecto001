@@ -1,0 +1,24 @@
+<h1>Todas las notas</h1>
+{{!-- {{notas}} --}}
+<div class="row">
+    {{#each notas}}
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">
+                <h4>{{title}}</h4>
+            </div>
+            <div class="card-body">
+                <h4>{{description}}</h4>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+
+
+<a href="/about">
+    <button class="btn btn-segundary">
+        About
+    </button>
+</a>
