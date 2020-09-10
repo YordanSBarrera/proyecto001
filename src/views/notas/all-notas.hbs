@@ -1,0 +1,33 @@
+<h1>Todas las notas</h1>
+{{!-- {{notas}} --}}
+<div class="row">
+    {{#each notas}}
+    {{!-- <pre>{{this}}</pre> --}}
+    <div class="col-md-3 p-2">
+        <div class="card">            
+            <div class="card-body">
+                <h4 class="card-title d-flex justify-content-between aling-item-center">
+                    {{title}} 
+                    <a href="/notas/edit-nota/{{_id}}"
+                    <i class="fas fa-pen-square"></i>
+                    </a>
+                </h4>
+                <p> {{description}}</p>
+                <form action="/notas/delete/{{_id}}?_metodo=DELETE" method="POST">
+                <input type="hidden" name="_metodo" value="DELETE">
+                <button class="btn btn-danger btn-block btn-sm">Borrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {{/each}}
+</div>
+
+
+
+<a href="/about">
+    <button class="btn btn-primary">
+        About
+    </button>
+</a>
